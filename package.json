@@ -1,0 +1,11 @@
+{
+	"name": "myapi-test",
+	"version": "1.0.0",
+	"description": "Integration testing for myapi v1",
+	"dependencies": {
+		"apickli": "latest"
+	},
+	"devDependencies": {
+		"@cucumber/cucumber": "^7.0.0"
+	}
+}
