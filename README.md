@@ -128,3 +128,19 @@ This will test the scenario and output the following:
 3 steps (3 passed)
 ```
 
+This is the result of our test of the scenario defined in `test/features/myapi.feature`:
+
+```
+Feature:
+	Httpbin.org exposes various resources for HTTP request testing
+	As Httpbin client I want to verify that all API resources are working as they should
+
+	Scenario: Setting headers in GET request
+		Given I set User-Agent header to apickli
+		When I GET /get
+		Then response body path $.headers.User-Agent should be apickli
+```
+
+Which shows that are scenario (comprised of 3 steps) indeed passes, which is consistent with the following test performed with `Postman`:
+
+![Screenshot of same test performed on Postman](postman-test.png)
