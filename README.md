@@ -141,6 +141,6 @@ Feature:
 		Then response body path $.headers.User-Agent should be apickli
 ```
 
-Which shows that are scenario (comprised of 3 steps) indeed passes, which is consistent with the following test performed with `Postman`:
+Which shows that our scenario (comprised of 3 steps) indeed passes, which is consistent with the following test performed with `Postman`:
 
 ![Screenshot of same test performed on Postman](postman-test.png)
