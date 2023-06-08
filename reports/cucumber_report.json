@@ -1,0 +1,183 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "this-test-is-used-to-request-the-sgnum-an-available-number.;testing-full-post-with-body-return-200.",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Testing full post with body return 200.",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I set Authorization header to Basic OWJFUGtEcjN0MzVvZVB2TXFRUDdVZm1VU1hmRWVuZ1Z2Q2ZvVTlDR2xNazBEbmtsOlI2Y0ljZjRGcUZQajZ4RE9BYWhyRkNITGE3clJTalNIS1FPQjN5R3dRbEhBbkcxMHNPTUNLb24xcmtnM3FBVjU=",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I set Content-Type header to application/json",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I set x-request-apim-id header to {{$guid}}",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I set Origin header to https://test.salesforce.com",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I set body to {\"msgBody\": {\"operador\": \"096\",\"idReserva\": \"SALESFORCE259e055f-b24c-ca25-4706-f0bdb3df7c0f\",\"dataFimReserva\": \"2023-06-06 15:00:00\",\"quantidadeNrs\": \"1\"},\"msgHdr\": {\"origem\": \"SALESFORCE\",\"destino\": \"159\",\"origemIDMsg\": \"SF9db8f84e-6d3e-9826-e4c7-a4c8bd30916a20230601\",\"origemDataEnvio\": \"2023-06-02 17:24:57\",\"origemChave\": \"salesforce-qa-1234\"}}",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I test POST with time 2000 to /agite/sgnum/v1/numbers",
+            "match": {
+              "location": "test\\features\\support\\init.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1085000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "response body should be valid json",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "response header x-request-apim-id should exist",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:151"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "response header Content-Length should exist",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:151"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "response header Content-Type should exist",
+            "match": {
+              "location": "node_modules\\apickli\\apickli-gherkin.js:151"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "this-test-is-used-to-request-the-sgnum-an-available-number.",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "This test is used to request the SGNUM an available number.",
+    "tags": [],
+    "uri": "test\\features\\Sgnum_Post.feature"
+  }
+]
