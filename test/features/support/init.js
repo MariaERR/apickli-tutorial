@@ -10,7 +10,7 @@ var {setDefaultTimeout} = require('@cucumber/cucumber');
 setDefaultTimeout(30 * 1000);
 //console.log(process.env.HOST)
 Before(function() {
-    this.apickli = new apickli.Apickli('https', 'sit.apim.pub.alpt.alticelabs.cloud');
+    this.apickli = new apickli.Apickli('https','sit.apim.pub.alpt.alticelabs.cloud');
     this.apickli.httpRequestOptions.strictSSL = false;
     this.apickli.addRequestHeader('Cache-Control', 'no-cache');
 });
