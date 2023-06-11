@@ -1,5 +1,5 @@
 {
-	"name": "myapi-test",
+	"name": "apickli-tutorial",
 	"version": "1.0.0",
 	"description": "Integration testing for myapi v1",
 	"dependencies": {
@@ -11,17 +11,19 @@
 		"cucumber-html-report": "latest",
 		"custom-cucumber-report-generator": "latest",
 		"dotenv": "^16.0.3",
-		"response-time": "2.3.2"
+		"response-time": "2.3.2",
+		"ts-node": "^10.9.1"
 	},
 	"devDependencies": {
-		"cucumber" : "latest",
 		"@cucumber/cucumber": "latest",
+		"@types/cucumber": "^7.0.0",
+		"@types/node": "^20.3.0",
+		"cucumber": "latest",
 		"cucumber-html-reporter": "latest"
 	},
 	"scripts": {
-
 		"test": "cucumber-js",
-		"test:report": "npm test ./test/features/**/*.feature -f json:./reports/cucumber_report.json && cucumber-html-reporter -o ./reports/cucumber_report.html -j ./reports/cucumber_report.json",
+		"test:report": "cucumber-js ./test/features/**/*.feature --format json:./reports/cucumber_reporter.json && node ./reports/cucumber_reporter.js",
 		"cucumber-html-reporter": "node cucumber-html-reporter.js"
 	}
 }
