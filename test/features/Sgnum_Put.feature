@@ -1,7 +1,7 @@
 Feature:This test is used to update the SGNUM number status.
 
 	Scenario: Testing full put with body return 200.
-		Given I set Authorization header to Basic OWJFUGtEcjN0MzVvZVB2TXFRUDdVZm1VU1hmRWVuZ1Z2Q2ZvVTlDR2xNazBEbmtsOlI2Y0ljZjRGcUZQajZ4RE9BYWhyRkNITGE3clJTalNIS1FPQjN5R3dRbEhBbkcxMHNPTUNLb24xcmtnM3FBVjU=
+		Given I set Authorization header to Basic N0MzVvZVB2TXFRUDdVZm1VU1hmRWVuZ1Z2Q2ZvVTlDR2xNazBEbmtsOlI2Y0ljZjRGcUZQajZ4RE9BYWhyRkNITGE3clJTalNIS1FPQjN5R3dRbEhBbkcxMHNPTUNLb24xcmtnM3FBVjU=
 		Given I set Content-Type header to application/json
 		Given I set x-request-apim-id header to {{$guid}}
 		Given I set Origin header to thttps://test.salesforce.com

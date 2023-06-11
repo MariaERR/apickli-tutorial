@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -35,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -74,7 +74,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -100,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 798000000
+              "duration": 775000000
             }
           },
           {
@@ -113,7 +113,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -126,7 +126,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -210,13 +210,13 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "I set Authorization header to Basic OWJFUGtEcjN0MzVvZVB2TXFRUDdVZm1VU1hmRWVuZ1Z2Q2ZvVTlDR2xNazBEbmtsOlI2Y0ljZjRGcUZQajZ4RE9BYWhyRkNITGE3clJTalNIS1FPQjN5R3dRbEhBbkcxMHNPTUNLb24xcmtnM3FBVjU=",
+            "name": "I set Authorization header to Basic N0MzVvZVB2TXFRUDdVZm1VU1hmRWVuZ1Z2Q2ZvVTlDR2xNazBEbmtsOlI2Y0ljZjRGcUZQajZ4RE9BYWhyRkNITGE3clJTalNIS1FPQjN5R3dRbEhBbkcxMHNPTUNLb24xcmtnM3FBVjU=",
             "match": {
               "location": "node_modules\\apickli\\apickli-gherkin.js:37"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -268,7 +268,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -281,7 +281,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1528000000
+              "duration": 149000000
             }
           },
           {
@@ -293,8 +293,9 @@
               "location": "node_modules\\apickli\\apickli-gherkin.js:167"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "failed",
+              "duration": 2000000,
+              "error_message": "stepContext: \ntestOutput: \n  success:  false\n  expected: 200\n  actual:   500\n  response: \n    statusCode: 500\n    headers: \n      content-type:                  application/json\n      x-request-apim-id:             {{$guid}}\n      x-request-id:                  0436ef25-973a-4106-bde1-c102beff23d6\n      content-length:                246\n      date:                          Sun, 11 Jun 2023 12:40:52 GMT\n      x-envoy-upstream-service-time: 12\n      server:                        envoy\n      via:                           1.1 google\n      alt-svc:                       h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000\n      connection:                    close\n    body: \n      \"\"\"\n        \n                    {\n                        \"code\":    \"APIM-500.00\",\n                        \"reason\":  \"Internal Server Error\",\n                        \"message\": \"Something went wrong. Please, try again later or contact the system administrator\"\n                    }\n                    \n      \"\"\""
             }
           },
           {
@@ -306,7 +307,7 @@
               "location": "node_modules\\apickli\\apickli-gherkin.js:162"
             },
             "result": {
-              "status": "passed",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -319,7 +320,7 @@
               "location": "node_modules\\apickli\\apickli-gherkin.js:151"
             },
             "result": {
-              "status": "passed",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -332,7 +333,7 @@
               "location": "node_modules\\apickli\\apickli-gherkin.js:151"
             },
             "result": {
-              "status": "passed",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -345,7 +346,7 @@
               "location": "node_modules\\apickli\\apickli-gherkin.js:151"
             },
             "result": {
-              "status": "passed",
+              "status": "skipped",
               "duration": 0
             }
           }

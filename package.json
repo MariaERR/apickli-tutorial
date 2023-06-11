@@ -23,7 +23,6 @@
 	},
 	"scripts": {
 		"test": "cucumber-js",
-		"test:report": "cucumber-js ./test/features/**/*.feature --format json:./reports/cucumber_reporter.json && node ./reports/cucumber_reporter.js",
-		"cucumber-html-reporter": "node cucumber-html-reporter.js"
+		"test:report": "cucumber-js ./test/features/**/*.feature --format json:./reports/cucumber_reporter.json && node ./reports/cucumber_reporter.js"
 	}
 }
