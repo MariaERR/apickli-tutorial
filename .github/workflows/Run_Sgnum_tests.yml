@@ -1,19 +1,53 @@
 name: Run Sgnum Tests
-
 on:
   push:
     branches:
       - main
   schedule:
-      - cron: '0 0 * * *' # Runs at midnight UTC every day
+    - cron: '0 0 * * *' # Runs at midnight UTC every day
+
 jobs:
   test:
     runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v3
-      ##- uses: actions/setup-node@v3
-        #with:
-         # node-version: 18
-      - run:  npm ci
-      - run:  npm run test:report
+
+      - name: Set Git User
+        run: git config user.name "super-programmer-alb"
+
+      - name: Update Local Repository
+        run: git pull
+
+      - name: Create or Checkout Feature Branch
+        run: |
+          branch_name="feature/MD-7-Identify-user"
+          git checkout -b "$branch_name"
+
+      - name: Export Proxy and Commit
+        run: |
+          # Export Proxy from the APIGEE UI
+          # ...
+
+          # Commit with the naming convention
+          git add .
+          git commit -m -S "MD-10 insert function xpto"
+          git push
+
+      - name: Update Local Repository (Defect)
+        run: git pull
+
+      - name: Create or Checkout Defect Branch
+        run: |
+          branch_name="defect/MD-7-Identify-user-error"
+          git checkout -b "$branch_name"
+
+      - name: Export Proxy and Commit (Defect)
+        run: |
+          # Export Proxy from the APIGEE UI
+          # ...
+
+          # Commit with the naming convention
+          git add .
+          git commit -m -S "MD-10 insert function xpto fix"
+          git push
