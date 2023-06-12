@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       epic_url:
-        description: 'URL of the Jira Epic'
+        description: 'https://alticegroupit.atlassian.net/browse/MD-262'
         required: true
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
 
       - name: Get Jira Epic Details
         env:
-          JIRA_API_URL: ${{ secrets.JIRA_API_URL }}
+          JIRA_API_URL: ${{ https://alticegroupit.atlassian.net/ }}
           JIRA_AUTH_TOKEN: ${{ secrets.JIRA_AUTH_TOKEN }}
           EPIC_URL: ${{ github.event.inputs.epic_url }}
         run: |
