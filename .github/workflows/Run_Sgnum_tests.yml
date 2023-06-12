@@ -26,9 +26,6 @@ jobs:
 
       - name: Export Proxy and Commit
         run: |
-          # Export Proxy from the APIGEE UI
-          # ...
-
           # Commit with the naming convention
           git add .
           git commit -m -S "MD-10 insert function xpto"
@@ -44,9 +41,6 @@ jobs:
 
       - name: Export Proxy and Commit (Defect)
         run: |
-          # Export Proxy from the APIGEE UI
-          # ...
-
           # Commit with the naming convention
           git add .
           git commit -m -S "MD-10 insert function xpto fix"
