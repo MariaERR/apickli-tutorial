@@ -1,0 +1,41 @@
+name: Create Feature Branches
+
+on:
+  workflow_dispatch:
+    inputs:
+      epic_url:
+        description: 'URL of the Jira Epic'
+        required: true
+
+jobs:
+  create_branches:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get Jira Epic Details
+        env:
+          JIRA_API_URL: ${{ secrets.JIRA_API_URL }}
+          JIRA_AUTH_TOKEN: ${{ secrets.JIRA_AUTH_TOKEN }}
+          EPIC_URL: ${{ github.event.inputs.epic_url }}
+        run: |
+          # Extract Epic Key from the URL
+          EPIC_KEY=$(echo "$EPIC_URL" | awk -F'/' '{print $NF}')
+
+          # Call Jira API to get epic details
+          response=$(curl -s -X GET \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $JIRA_AUTH_TOKEN" \
+            $JIRA_API_URL/epic/$EPIC_KEY)
+
+          # Extract user stories from the epic response
+          user_stories=$(echo "$response" | jq -r '.issues[].key')
+
+          # Create feature branches for each user story
+          for story in $user_stories; do
+            branch_name="FEATURE/$story"
+            git checkout -b $branch_name
+            git push origin $branch_name
+          done
