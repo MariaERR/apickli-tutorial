@@ -28,10 +28,10 @@ jobs:
           response=$(curl -s -X GET \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer $JIRA_AUTH_TOKEN" \
-            $JIRA_API_URL/epic/$EPIC_KEY)
+            "$JIRA_API_URL/issue/$EPIC_KEY")
 
           # Check if the response contains user stories
-          user_stories=$(echo "$response" | jq -r '.issues[].key')
+          user_stories=$(echo "$response" | jq -r '.fields.subtasks[].key')
           if [ -z "$user_stories" ]; then
             echo "No user stories found in the Jira Epic."
             exit 1
