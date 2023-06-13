@@ -1,0 +1,19 @@
+name: Feature Branch Create
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-feature-branch:
+    runs-on: windows-latest
+    steps:
+      - name: Set up Git
+        uses: actions/checkout@v2
+
+      - name: Create Feature Branch
+        run: |
+          git config user.name "super-programmer-alb"
+          git config user.email "errfig.m@example.com"
+          branch_name="feature/${{ env.BRANCH_NAME }}_new_feature"
+          git checkout -b "$branch_name"
+          git push origin "$branch_name"
