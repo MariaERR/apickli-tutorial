@@ -18,6 +18,6 @@ jobs:
         run: |
           git config --global user.name "maria-alb"
           git config --global user.email "errfig.m@gmail.com"
-          branch_name="feature/${{ github.event.inputs.branch_name }}_new_feature"
-          git checkout -b "$branch_name"
-          git push origin "$branch_name"
+          $env:branch_name="feature/${{ github.event.inputs.branch_name }}_new_feature"
+          git checkout -b $env:branch_name
+          git push origin $env:branch_name
