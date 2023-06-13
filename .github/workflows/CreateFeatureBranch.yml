@@ -2,6 +2,10 @@ name: Feature Branch Create
 
 on:
   workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'Branch name'
+        required: true
 
 jobs:
   create-feature-branch:
@@ -12,8 +16,8 @@ jobs:
 
       - name: Create Feature Branch
         run: |
-          git config user.name "maria-alb"
-          git config user.email "errfig.m@gmail.com"
-          branch_name="feature/${{ env.BRANCH_NAME }}_new_feature"
+          git config user.name "super-programmer-alb"
+          git config user.email "errfig.m@example.com"
+          branch_name="feature/${{ github.event.inputs.branch_name }}_new_feature"
           git checkout -b "$branch_name"
           git push origin "$branch_name"
