@@ -16,7 +16,7 @@ jobs:
 
       - name: Create Feature Branch
         run: |
-          git config --global user.name "maria-alb"
+          git config --global user.name "Maria E"
           git config --global user.email "errfig.m@gmail.com"
           $env:branch_name="feature/${{ github.event.inputs.branch_name }}_new_feature"
           git checkout -b $env:branch_name
