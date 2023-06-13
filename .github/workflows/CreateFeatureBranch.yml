@@ -12,8 +12,8 @@ jobs:
 
       - name: Create Feature Branch
         run: |
-          git config user.name "super-programmer-alb"
-          git config user.email "errfig.m@example.com"
+          git config user.name "maria-alb"
+          git config user.email "errfig.m@gmail.com"
           branch_name="feature/${{ env.BRANCH_NAME }}_new_feature"
           git checkout -b "$branch_name"
           git push origin "$branch_name"
