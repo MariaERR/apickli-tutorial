@@ -1,4 +1,4 @@
-name: Create Feature Branches
+name: Create Feature Branches jira
 
 on:
   workflow_dispatch:
