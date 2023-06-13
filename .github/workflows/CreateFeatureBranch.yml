@@ -14,9 +14,13 @@ jobs:
       - name: Set up Git
         uses: actions/checkout@v2
 
+      - name: Set Remote URL
+        run: |
+          git remote set-url origin https://github.com/MariaERR/apickli-tutorial.git
+
       - name: Create Feature Branch
         run: |
-          git config --global user.name "Maria E"
+          git config --global user.name "maria-alb"
           git config --global user.email "errfig.m@gmail.com"
           $env:branch_name="feature/${{ github.event.inputs.branch_name }}_new_feature"
           git checkout -b $env:branch_name
